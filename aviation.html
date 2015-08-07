@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="Find information about the U.S. Navy's premier outreach
+programs including Navy Weeks, fly-overs, color-guards, hometown news, speakers, bands." />
+	<link rel="icon" href="assets/img/favicon.png" />
+	<title>U.S. Navy | Naval Aviation Outreach</title>
+	<link href="assets/css/bootstrap.css" rel="stylesheet" />
+	<link rel="stylesheet" href="./assets/css/mapbox.css" />
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/mapbox.js"></script>
+
+	<script src="assets/js/modernizr.js"></script>
+
+
+
+	<script>
+
+
+	  $('#page-nav').affix({
+	offset: {
+		top: $('#page-nav').offset().top,
+		bottom: $('footer').outerHeight(true) + $('.application').outerHeight(true)
+	}
+});
+
+	</script>
+<style>
+		.leaflet-control-container {
+		display:none;
+		}
+
+
+		</style>
+</head>
+
+<body data-spy="scroll" data-target="#content-wrapper">
+	<header>
+		<div id="big-head-aviation" class="big-head-img-size" title="Navy jet breaks sound barrier."></div>
+<div id="layer" ></div>
+		<nav id="site-nav" class="navbar navbar-default navbar-static-top">
+
+			<!--Big Head - Image text overlay, logo, title and site navigation-->
+
+
+
+
+			<script>
+				$("#site-nav").load("navigation.html");
+			</script>
+		</nav>
+		<div class="jumbotron">
+	<div class="container hidden-xxs">
+
+					<h1><strong>Naval Aviation</strong></h1>
+					<p>
+						<strong>We handle all initial requests for Navy aircraft at public events.</strong>
+					</p>
+
+					<a class="btn btn-clear" href="#top" role="button">Learn More</a>
+
+
+					<script>
+						document.write('<' + 'a' + ' ' + 'class=' + '\"' + 'btn btn-clear' + '\"' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + '\"' + 'm' + 'a' + 'i' + '&' + '#' + '1' + '0' + '8' + ';' + 't' + 'o' + '&' + '#' + '5' + '8' + ';' + 'a' + 'v' + 'i' + 'a' + '%' + '7' + '4' + '%' + '6' + '9' + 'o' + 'n' + '&' + '#' + '1' + '1' + '5' + ';' + '%' + '&' + '#' + '5' + '5' + ';' + '&' + '#' + '5' + '3' + ';' + 'p' + 'p' + 'o' + 'r' + '%' + '7' + '4' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + 'v' + '&' + '#' + '1' + '2' + '1' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '0' + '9' + ';' + 'i' + 'l' + '\"' + ' ' + 'role=' + '\"' + 'button' + '\"' + '>' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + 'a' + '&' + '#' + '1' + '1' + '6' + ';' + 'i' + 'o' + '&' + '#' + '1' + '1' + '0' + ';' + '&' + '#' + '1' + '1' + '5' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + 'p' + 'p' + 'o' + 'r' + 't' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + 'y' + '&' + '#' + '4' + '6' + ';' + 'm' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '8' + ';' + '<' + '/' + 'a' + '>');
+					</script>
+					<noscript>[Turn on JavaScript to see the email address call us at 901-874-5800]</noscript>
+
+
+
+			</div>
+
+		</div>
+		<div id="sm-screen-title" class="container visible-xxs">
+
+					<h1><strong>Naval Aviation</strong></h1>
+					<p>
+						We handle all initial requests for Navy aircraft at public events.
+					</p>
+
+					<a class="btn btn-clear" href="#top" role="button">Learn More</a>
+
+
+					<script>
+						document.write('<' + 'a' + ' ' + 'class=' + '\"' + 'btn btn-clear' + '\"' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + '\"' + 'm' + 'a' + 'i' + '&' + '#' + '1' + '0' + '8' + ';' + 't' + 'o' + '&' + '#' + '5' + '8' + ';' + 'a' + 'v' + 'i' + 'a' + '%' + '7' + '4' + '%' + '6' + '9' + 'o' + 'n' + '&' + '#' + '1' + '1' + '5' + ';' + '%' + '&' + '#' + '5' + '5' + ';' + '&' + '#' + '5' + '3' + ';' + 'p' + 'p' + 'o' + 'r' + '%' + '7' + '4' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + 'v' + '&' + '#' + '1' + '2' + '1' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '0' + '9' + ';' + 'i' + 'l' + '\"' + ' ' + 'role=' + '\"' + 'button' + '\"' + '>' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + 'a' + '&' + '#' + '1' + '1' + '6' + ';' + 'i' + 'o' + '&' + '#' + '1' + '1' + '0' + ';' + '&' + '#' + '1' + '1' + '5' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + 'p' + 'p' + 'o' + 'r' + 't' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + 'y' + '&' + '#' + '4' + '6' + ';' + 'm' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '8' + ';' + '<' + '/' + 'a' + '>');
+					</script>
+					<noscript>[Turn on JavaScript to see the email address or call us at 901-874-5800]</noscript>
+
+
+
+			</div>
+
+	</header>
+
+
+	<!--Navigation - imported with jQuery-->
+
+
+
+
+
+
+
+
+	<!--/big-head-img-placer-->
+	<!--/big-head-txt-->
+
+
+
+
+
+	<!--/big-head-->
+	<!--Main Section | Navbar | Content | Rightbar-->
+	<div id="content-wrapper">
+		<div class="container">
+			<div class="row">
+				<!--main-content-->
+				<!--Nav Bar-->
+
+				<div class="hidden-xs col-sm-2 bs-docs-sidebar">
+				<nav id="page-nav" data-spy="affix" data-offset-top="900" >
+<ul class="nav nav-stacked" >
+
+							<li>
+								<a href="#aviation">Naval Aviation</a>
+								<ul class="nav nav-stacked">
+									<li>
+										<a href="#flyovers">Flyovers</a>
+									</li>
+									<li>
+										<a href="#static-displays">Static Displays</a>
+									</li>
+									<li>
+										<a href="#airshows">Air Shows</a>
+									</li>
+								</ul>
+								<!--/ul-aviation-->
+								<li>
+									<!--/li-aviation-->
+									<a href="#requests-overview">Submit Request</a>
+									<ul class="nav nav-stacked">
+										<li>
+											<a href="#2535">Download Form</a>
+										</li>
+										<li>
+											<a href="#faa"><abbr title="Federal Aviation Administration">FAA</abbr> Authorization</a>
+										</li>
+										<li>
+											<a href="#send">Scan &amp; Send</a>
+										</li>
+										<li>
+											<a href="#eligibility">Eligibility</a>
+										</li>
+										<li>
+											<a href="#authorization">Authorization</a>
+										</li>
+										<li>
+											<a href="#find">Find Aircraft</a>
+										</li>
+										<li>
+											<a href="#notes">Notes</a>
+										</li>
+									</ul>
+									<!--/ul-request-->
+								</li>
+								<!--/li-request-->
+								<li>
+									<a href="#aviation-map">Aviation Map</a>
+
+								</li>
+
+
+
+								<li></li>
+
+								<li>
+									<a href="#contact-row">Contact</a>
+								</li>
+								<li>
+									<a href="#contact-row">Resources</a>
+								</li>
+						</ul>
+						<!--/ul-ltl-nav-list-->
+
+					<!--/col-sm-2-->
+				</nav>
+					</div>
+				<!--/Nav Bar-->
+				<!--Main Content -->
+				<main>
+					<div class="col-sm-7 ">
+<div class="seperation-pad hide-xs">
+
+
+
+
+
+
+						<!--Naval Aviation -->
+						<section id="aviation">
+							<h2>Naval Aircraft at Public Events</h2>
+							<p>Our office handles all initial requests for aircraft at public events to determine if the Navy can legally provide support.</p>
+							<p>To determine if your event is eligable you will need to follow the directions below and complete a
+								<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2014/06/dd2535.pdf"><em> Request for Military Aerial Support (<abbr title="Department of Defense">DD </abbr>Form 2535).</em></a>
+							</p>
+							<div class="alert alert-warning" role="alert">
+								<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+								<span class="sr-only">Please Note:</span>Limited number of aerial demonstrations for FY15</div>
+							<p>The Department of Defense's FY15 community outreach planning guidance permits the Navy to support a limited number of military aerial demonstrations as put forth in the administrative message
+								<a href="http://www.npc.navy.mil/bupers-npc/reference/messages/Documents/NAVADMINS/NAV2015/NAV15035.txt">here.</a>Every request will be evaluated and approved on a case-by-case basis. Our office reviews the request to determine eligablity (legally supportable) and the Navy Chief of Information (<abbr title="Navy Chief of Information">CHINFO</abbr>) makes the final authorizing decision.</p>
+							<p>Please do not contact Naval aviation units about your event until event authorization is confirmed.</p>
+						</section>
+
+
+
+
+
+
+
+
+
+						<!--Naval Flyovers -->
+						<section id="flyovers">
+							<h3>Flyovers</h3>
+							<p>All flyover requests will be reviewed for an eligibility determination in accordanance with established criteria as set forth in Department of Defense and Navy regulations.</p>
+							<p>Due to the current fiscal environment and limited number of flyovers allowed we will also evaluate the request while considering things such as: audience reach and size, media coverage potential, recruiting priorities, Gallup data, Chief of Naval Personnel diversity priority markets, previous naval aviation support and flag/general officer, congressional, or other high-level interest.</p>
+							<p>Please follow the <a href="#request">directions</a>below to submit a request.</p>
+						</section>
+
+
+
+
+
+
+
+
+
+						<!--Static Displays -->
+						<section id="static-displays">
+							<h3>Static Displays</h3>
+							<p>The Navy is permitted to fly to 10 civilian air shows for static display support in FY15.
+								<p>Additionally, a squadron can support static display support in conjunction with mission-related travel. Squadrons conducting training all over the country and can stop at an event if it is en-route. Pending squadron There is no limit to the amount of the event</p>
+								<p>We maintain a list of air shows authorized for static display support as well as a list of authorized events coinciding with mission related-travel:
+									<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2015/05/authorized-2015_aviation_events_may.pdf">2015 Aviation Events</a>.</p>
+								<p>Please follow the
+									<a href="#request">directions</a>below to submit a request.</p>
+						</section>
+
+
+
+
+
+
+
+
+
+
+						<!--Air Shows -->
+						<section id="airshows">
+							<h3>Air Shows and Tactical Demonstrations</h3>
+							<p>The Navy is permitted to conduct the following in FY15:</p>
+							<ul style="list-style-position: inside;text-indent:10px;">
+								<li>36 Blue Angels air shows
+									<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2015/05/authorized-2015_aviation_events_may.pdf">(view schedule)</a>
+								</li>
+								<li>20 tactical air demonstrations at air shows not featuring the Blue Angels
+									<a href="http://blueangels.navy.mil/show/">(view schedule)</a>
+								</li>
+								<li>6 Navy-hosted air shows/open houses</li>
+							</ul>
+							<div class="spacing"></div>
+							<table class="table table-striped">
+								<tr>
+									<th colspan="2">Navy-hosted air shows for FY15</th>
+									<th>More Info</th>
+								</tr>
+								<tr>
+									<td>
+										<time datetime="2015-03-15">March 15</time>
+									</td>
+<td>Naval Air Facility El Centro, <abbr title="California">CA<abbr></td>
+									<td>
+										<a href="http://navylifesw.com/elcentroairshow/">El Centro Air Show</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<time datetime="2015-04-18">April 18</time>-
+										<time datetime="2015-09-20"><span class="hidden">April</span>19</time>
+									</td>
+									<td>Naval Air Station Corpus Christi, <abbr title="Texas">TX</abbr></td>
+									<td>
+										<a href="http://wingsoversouthtexas.com/nas-corpus/">Wings Over South Texas</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<time datetime="2015-09-19">September 19</time>-
+										<time datetime="2015-09-20"><span class="hidden">September</span>20</time>
+									</td>
+									<td>Naval Air Station Oceana, <abbr title="Virginia">VA</abbr></td>
+									<td>
+										<a href="http://oceanaairshow.com/">Oceana Air Show</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<time datetime="2015-09-26">September 26</time>-
+										<time datetime="2015-09-20"><span class="hidden">September</span>27</time>
+									</td>
+									<td>Naval Base Ventura County, <abbr title="California"CA>CA</abbr></td>
+									<td>
+										<a href="http://www.cnic.navy.mil/Ventura/index.htm ">NBVC</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<time datetime="2015-10-24">October 24</time>-
+										<time datetime="2015-10-25"><span class="hidden">October</span>25</time>
+									</td>
+									<td>Naval Air Station Jacksonville, <abbr title="Florida">FL</abbr></td>
+									<td>
+										<a href="http://www.cnic.navy.mil/regions/cnrse/installations/nas_jacksonville.html">NAS Jax</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<time datetime="2015-11-06">November 6</time>-
+										<time datetime="2015-11-09"><span class="hidden">November</span>9</time>
+									</td>
+									<td>Naval Air Station Pensacola, <abbr title="Florida">FL</abbr></td>
+									<td>
+										<a href="ttp://www.naspensacolaairshow.com/">Pensecola Air Show</a>
+									</td>
+								</tr>
+							</table>
+
+
+							<div class="spacing"></div>
+
+							<!--Notes -->
+							<footer id="notes" class="col-sm-12">
+								<p style="font-style:italic">All events for FY15 are scheduled and no further air show requests will be accepted. We are accepting requests for tactical demonstration particpation in FY16 air shows.</p>
+							</footer>
+								<div class="big-spacing"></div>
+						</section>
+
+
+
+
+
+
+
+
+
+						<section id="requests-overview">
+							<h3>Submit a Request</h3>
+							<p><em>Four requirments must be met for a request to be fullfilled.</em></p>
+
+							<ul class="info-li">
+								<li>Site certification from the <abbr title="Federal Aviation Administration">FAA</abbr></li>
+								<li>Deemed eligabile by <abbr title="Navy Office of Community Outreach">NAVCO</abbr> (our office)</li>
+								<li>Authorization by the Navy Chief of Information (<abbr title="Navy Chief of Information">CHINFO</abbr>)</li>
+								<li>Commitment from a Navy Squadron to support request</li>
+							</ul>
+						</section>
+
+						<div class="spacing"></div>
+						<section id="requests-steps">
+							<dl>
+								<dt id="2535"><h4>1. Fill out a <abbr title="Department of Defense">DD</abbr> Form 2535.</h4></dt>
+								<div class="spacing"></div>
+								<dd>
+									<div class="well">
+										<p><strong>Download</strong> <a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2014/06/dd2535.pdf">Request for Military Aerial Support (<abbr title="Department of Defense">DD<abbr> Form 2535)</a></p>
+										<p>Ink signatures required in:</p>
+										<p><strong>Box 3d</strong> Event Site Certification, signed by an agent exercising authority for site use at requested location.</p>
+										<p>
+											<strong>Box 25a</strong> President/Chairman, signed by the senior official (president, chairman, commander, etc.) of requesting organization.</p>
+										<p>
+											<p><em>If you are the authorizing authority for the site use and the senior official of the requesting organization, sign both 3d and 25a.</em></p>
+
+									</div>
+								</dd>
+
+
+
+								<div class="spacing"></div>
+
+								<dt id="faa"><h4>2. Send <abbr title="Department of Defense">DD</abbr> Form 2535 to local <abbr title="Federal Aviation Administration">FAA</abbr> <abbr title="Flight Standards District Office">FSDO</abbr></h4></dt>
+								<div class="spacing"></div>
+								<dd>
+									<div class="well">
+										<p>An <abbr title="Federal Aviation Administration">FAA</abbr> Flight Standards District Officer (<abbr title="Flight Standards District Office">FSDO</abbr>) inspector must fill out <strong>section IV </strong>and sign <strong>box 19d</strong>. Search for your regional <abbr title="Flight Standards District Office">FSDO</abbr> inspectors <a href="http://www.faa.gov/about/office_org/field_offices/fsdo/">here</a>.</p>
+
+										<p><em>Ink signatures required in:</em></p>
+
+										<p><strong>Box 19d: </strong><abbr title="Federal Aviation Administration">FAA</abbr> Coordinating Official, signed by the <abbr title="Flight Standards District Office">FSDO</abbr> in the region of the requested flyover.</p>
+									</div>
+								</dd>
+								<div class="spacing"></div>
+								<dt id="send"><h4>3. Scan and Send Form to Navy</h4></dt>
+								<div class="spacing"></div>
+								<dd>
+									<div class="well">
+										<p>Scan and send a <strong>.pdf</strong> of the form to
+											<script>
+												document.write('<' + 'a' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + '\"' + 'm' + 'a' + 'i' + '&' + '#' + '1' + '0' + '8' + ';' + 't' + 'o' + '&' + '#' + '5' + '8' + ';' + 'a' + 'v' + 'i' + 'a' + '%' + '7' + '4' + '%' + '6' + '9' + 'o' + 'n' + '&' + '#' + '1' + '1' + '5' + ';' + '%' + '&' + '#' + '5' + '5' + ';' + '&' + '#' + '5' + '3' + ';' + 'p' + 'p' + 'o' + 'r' + '%' + '7' + '4' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + 'v' + '&' + '#' + '1' + '2' + '1' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '0' + '9' + ';' + 'i' + 'l' + '\"' + ' ' + '\"' + '>' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + 'a' + '&' + '#' + '1' + '1' + '6' + ';' + 'i' + 'o' + '&' + '#' + '1' + '1' + '0' + ';' + '&' + '#' + '1' + '1' + '5' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + 'p' + 'p' + 'o' + 'r' + 't' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + 'y' + '&' + '#' + '4' + '6' + ';' + 'm' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '8' + ';' + '<' + '/' + 'a' + '>');
+											</script>
+											<noscript>[Turn on JavaScript to see the email address or call us at 901-874-5800]</noscript>.</p>
+										<p>
+											<em>Please specify whether it is an air-show, flyover or static display/fly-in request in the subject line.</em>
+										</p>
+									</div>
+									<dd>
+
+										<div class="spacing"></div>
+										<dt id="eligibility"><h4>4. Eligable/non-eligable status determinitation</h4></dt>
+										<div class="spacing"></div>
+										<dd>
+											<div class="well">
+												<p>
+													<strong>Non-eligable event: </strong>if the event is deemed non-eligable we provide you with an explination of the policy that prevents the Navy from fullfilling your request.</p>
+												<p>
+													<strong>Eligable event: </strong>sent to the Navy Chief of Information (<abbr title="Navy Chief of Information">CHINFO</abbr>) for authorization decision.</p>
+												<p>
+													<em>Please note that an eligible status does not a guarantee support. The request still needs to be authorized and the aviation units in your area may have operational obligations or previously scheduled events that could prevent support.</em>
+												</p>
+											</div>
+
+										</dd>
+										<div class="spacing"></div>
+										<dt id="authorization"><h4>5. Authorization from <abbr title="Navy Chief of Information">CHINFO</abbr></h4><dt>
+												<div class="spacing"></div>
+												<dd><div class="well">
+													<p>We will notify you once a decision is made.</p>
+													<p>If given authorization you may begin contacting naval aviation units in your area directly to find a squadron that can fullfill the request.</p>
+													<p>
+														<em>Squadrons will do everything they can to support your request but please keep in mind that operational obligations or previously scheduled events may prevent them from providing support.</em>
+													</p>
+												</div>
+									</dd>
+
+											<div class="spacing"></div>
+											<dt id="find"><h4>6. Find aircraft</h4></dt>
+										<div class="spacing"></div>
+										<dd>
+											<div class="well">
+												<p>Contact and coordination must be done by the requestor. Our office cannot provide coordination support.</p>
+												<p>Search our
+													<a href="#aviation-map"> <strong>map</strong></a> of all airfields with naval aircraft here.</p>
+												<p>Contact the aviation coordinators listed on the map to find a unit that can support the request.</p>
+											</div>
+
+										</dd>
+										<div class="spacing"></div>
+
+										<footer id="request-notes">
+											<p><em>The Navy Office of Community Outreach does not own aircraft and cannot fullfill the actual request. We can only determine if an event is eligable and seek authorization. Coordination is handled directly between Navy aviation activities and event orginizers.</em></p>
+										</footer>
+
+
+</section>
+
+<div class="spacing"></div>
+<section id="aviation-map">
+	<div id="map-row" class="row">
+
+		<div id="map-container" class="col-sm-6">
+
+			<h3>Naval Aviation Sites</h3>
+			<p>Find aircraft that can fullfill your request.</p>
+
+			<div id='map' class='map aviation-map-size'></div>
+
+
+
+
+
+
+			<menu id="map-menu">
+
+
+				<div class="row">
+					<div id="map-caption" class="col-sm-4 col-sm-offset-1">
+						Choose a location on the map or from the list to view contact information and types of aircraft available.
+					</div>
+					<div id="data" class="Column1 col-sm-3">
+						<!-- data Start -->
+
+
+						<ul id="map-locations1" class="map-menu-list">
+							<!-- data Emd-->
+					</div>
+					<div id="Column2" class="Column2 col-sm-4">
+<ul id="map-locations2" class="map-menu-list">
+					</div>
+				</div>
+			</menu>
+				</div>
+			</div>
+</section>
+	</div>
+			</div>
+
+
+
+</main>
+
+
+
+
+
+
+				<aside>
+					<div class="col-sm-2 content-right">
+						<div class="spacing"></div>
+						<h4>Contact</h4>
+						<div class="hline"></div>
+						<div class="spacing-aside"></div>
+						<address>
+<div class="vcard">
+
+
+  <div class="org">
+	<span class="organization-name hidden">Navy Office of Community Outreach <abbr title="Navy Office of Community Outreach" class="nickname">(NAVCO)</abbr></span>
+	<span class="organization-unit">Naval Aviation Director</span>
+							</div>
+
+<script>
+						document.write('<' + 'a' + ' ' + 'class=' + '\"' + 'email' + '\"' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + '\"' + 'm' + 'a' + 'i' + '&' + '#' + '1' + '0' + '8' + ';' + 't' + 'o' + '&' + '#' + '5' + '8' + ';' + 'a' + 'v' + 'i' + 'a' + '%' + '7' + '4' + '%' + '6' + '9' + 'o' + 'n' + '&' + '#' + '1' + '1' + '5' + ';' + '%' + '&' + '#' + '5' + '5' + ';' + '&' + '#' + '5' + '3' + ';' + 'p' + 'p' + 'o' + 'r' + '%' + '7' + '4' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + 'v' + '&' + '#' + '1' + '2' + '1' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '0' + '9' + ';' + 'i' + 'l' + '\"' + ' ' + 'role=' + '\"' + 'button' + '\"' + '>' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + 'a' + '&' + '#' + '1' + '1' + '6' + ';' + 'i' + 'o' + '&' + '#' + '1' + '1' + '0' + ';' + '&' + '#' + '1' + '1' + '5' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + 'p' + 'p' + 'o' + 'r' + 't' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + 'y' + '&' + '#' + '4' + '6' + ';' + 'm' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '8' + ';' + '<' + '/' + 'a' + '>');
+					</script>
+					<noscript>[Turn on JavaScript to see the email address call us at 901-874-5803]</noscript>
+<div class="tel">901-874-5803</div>
+
+
+  </div>
+						</address>
+					<a href="http://www.faa.gov/about/office_org/field_offices/fsdo/">FSDO office</a>
+						<a href="#aviation-map">Aviation Squadrons</a>
+</div>
+
+
+
+
+
+
+					<div class="col-sm-2  content-right">
+						<div class="spacing"></div>
+						<h4>Resources</h4>
+						<div class="hline"></div>
+						<div class="spacing-aside"></div>
+						<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2014/06/dd2535.pdf">Request Form (<abbr title="Department of Defense">DD </abbr>2535)</a>
+
+							<a href="http://www.faa.gov/about/office_org/field_offices/fsdo/"><abbr title="Flight Standards District Office">FSDO</abbr> Locater</a>
+
+							<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2015/05/authorized-2015_aviation_events_may.pdf">Authorized Events for 2015</a>
+
+							<a href="http://www.blueangels.navy.mil/">Blue Angels</a>
+
+							<a style="margin-left:10%;margin-top:0;" href="http://www.blueangels.navy.mil/media/show/2016ShowSchedule.pdf">2015 Schedule</a>
+
+							<a style="margin-left:10%;margin-top:0;" href="http://www.blueangels.navy.mil/media/show/2015ShowSchedule.pdf">2016 Schedule</a>
+
+							<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2015/04/Navy-Parachute-Team-2015-Schedule_as-of-201504072.pdf">Leap Frogs Schedule</a>
+
+							<a href="#aviation-map">Aviation Squadrons</a>
+
+
+					</div>
+					<div class="col-sm-2 content-right">
+						<div class="spacing"></div>
+						<h4>Other</h4>
+
+						<div class="hline"></div>
+						<div class="spacing-aside"></div>
+						<em>Aviation outreach offices</em>
+						<dl>
+
+						<dt>
+						Air Force:</dt>
+						  <dd>703.695.9776</dd>
+
+
+
+							<dt>Air Force</dt><dd>703.695.9776</dd>
+							<dt>Army</dt><dd>703.697.5726</dd>
+							<dt>Air Nat'l. Guard</dt><dd>703.607.2570</dd>
+							<dt>Marine Corps</dt><dd>703.692.7434</dd>
+	</dl>
+					</div>
+
+				</aside>
+
+
+			</div>
+</div>
+
+			<aside class="container">
+				<div id="contact-row" class="row">
+					<!--Nav Bar -->
+					<!--Main Content -->
+					<div id="contact-container" class="col-sm-7 col-sm-offset-3">
+						<div class="col-sm-4 content-right">
+
+						<div class="spacing"></div>
+						<h4>Contact</h4>
+						<div class="hline"></div>
+						<div class="spacing-aside"></div>
+						<address>
+<div class="vcard">
+
+
+  <div class="org">
+	<span class="organization-name hidden">Navy Office of Community Outreach <abbr title="Navy Office of Community Outreach" class="nickname">(NAVCO)</abbr></span>
+	<span class="organization-unit">Naval Aviation Director</span>
+							</div>
+
+<script>
+						document.write('<' + 'a' + ' ' + 'class=' + '\"' + 'email' + '\"' + ' ' + 'h' + 'r' + 'e' + 'f' + '=' + '\"' + 'm' + 'a' + 'i' + '&' + '#' + '1' + '0' + '8' + ';' + 't' + 'o' + '&' + '#' + '5' + '8' + ';' + 'a' + 'v' + 'i' + 'a' + '%' + '7' + '4' + '%' + '6' + '9' + 'o' + 'n' + '&' + '#' + '1' + '1' + '5' + ';' + '%' + '&' + '#' + '5' + '5' + ';' + '&' + '#' + '5' + '3' + ';' + 'p' + 'p' + 'o' + 'r' + '%' + '7' + '4' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + 'v' + '&' + '#' + '1' + '2' + '1' + ';' + '&' + '#' + '4' + '6' + ';' + '&' + '#' + '1' + '0' + '9' + ';' + 'i' + 'l' + '\"' + ' ' + 'role=' + '\"' + 'button' + '\"' + '>' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + '&' + '#' + '1' + '0' + '5' + ';' + 'a' + '&' + '#' + '1' + '1' + '6' + ';' + 'i' + 'o' + '&' + '#' + '1' + '1' + '0' + ';' + '&' + '#' + '1' + '1' + '5' + ';' + '&' + '#' + '1' + '1' + '7' + ';' + 'p' + 'p' + 'o' + 'r' + 't' + '&' + '#' + '6' + '4' + ';' + 'n' + 'a' + '&' + '#' + '1' + '1' + '8' + ';' + 'y' + '&' + '#' + '4' + '6' + ';' + 'm' + '&' + '#' + '1' + '0' + '5' + ';' + '&' + '#' + '1' + '0' + '8' + ';' + '<' + '/' + 'a' + '>');
+					</script>
+					<noscript>[Turn on JavaScript to see the email address call us at 901-874-5803]</noscript>
+<div class="tel">901-874-5803</div>
+
+
+  </div>
+						</address>
+					<a href="http://www.faa.gov/about/office_org/field_offices/fsdo/">FSDO office</a>
+						<a href="#aviation-map">Aviation Squadrons</a>
+					</div>
+
+					<div class="col-sm-4 content-right">
+
+
+
+
+
+						<div class="spacing"></div>
+						<h4>Resources</h4>
+						<div class="hline"></div>
+						<div class="spacing-aside"></div>
+						<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2014/06/dd2535.pdf">Request Form (<abbr title="Department of Defense">DD </abbr>2535)</a>
+
+							<a href="http://www.faa.gov/about/office_org/field_offices/fsdo/"><abbr title="Flight Standards District Office">FSDO</abbr> Locater</a>
+
+							<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2015/05/authorized-2015_aviation_events_may.pdf">Authorized Events for 2015</a>
+
+							<a href="http://www.blueangels.navy.mil/">Blue Angels</a>
+
+							<a style="margin-left:10%;margin-top:0;" href="http://www.blueangels.navy.mil/media/show/2016ShowSchedule.pdf">2015 Schedule</a>
+
+							<a style="margin-left:10%;margin-top:0;" href="http://www.blueangels.navy.mil/media/show/2015ShowSchedule.pdf">2016 Schedule</a>
+
+							<a href="http://www.navyoutreach.org/newsite2/wp-content/uploads/2015/04/Navy-Parachute-Team-2015-Schedule_as-of-201504072.pdf">Leap Frogs Schedule</a>
+
+							<a href="#aviation-map">Aviation Squadrons</a>
+
+
+
+		</div>
+	</div>
+				</div>
+				</div>
+</aside>
+</div>
+	<footer id="site-map">
+		<script>
+			$("#site-map").load("footer.html");
+		</script>
+	</footer>
+	<!-- Bootstrap core JavaScript==================================================-->
+	<script src="assets/js/bootstrap.min.js"></script>
+
+<script>
+						L.mapbox.accessToken = 'pk.eyJ1IjoibmF2eW91dHJlYWNoIiwiYSI6IlM0TlBZWlkifQ.mo1aOGEKniBJzpxEPszjIg';
+						  var map = L.mapbox.map('map', 'navyoutreach.mdj74g7m', {attributionControl: false}).setView([38.078, -100.393], 4);
+
+						  var myLayer = L.mapbox.featureLayer().addTo(map);
+
+						  myLayer.setGeoJSON([
+						  {type:'Feature',properties:{'Base Name':'Joint Base Andrews','Street':'1380 California Ave','City':'Joint Base Andrews','State':'MD','Zip':'20762','geo_accuracy':'military','Phone':'240-857-2740/4424','Types of Aircraft':'EA-6B, C-130, C-20, P-3 ',description:'1380 California Ave<br/>\nJoint Base Andrews, MD 20762<br/>\n\n<br/>240-857-2740/4424<br/>\n\n<br/>Available Aircraft<br/>\nEA-6B, C-130, C-20, P-3 ',title:'Andrews',description:'1380 California Ave<br/>\nJoint Base Andrews, MD 20762<br/>\n\n<br/>240-857-2740/4424<br/>\n\n<br/>Available Aircraft<br/>\nEA-6B, C-130, C-20, P-3 ','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amk'},geometry:{coordinates:[-76.891966,38.808095],type:'Point'},'id':'ciaq7gh1u002siyknw2ugjbf0'},
+
+						  {type:'Feature',properties:{'Base Name':'Marine Corps Air Station Beaufort','Street':'Drayton Street','City':' Beaufort','State':'SC','Zip':'29906','geo_accuracy':'residential','Phone':'843-228-8937','Types of Aircraft':'F/A-18E',description:'Drayton Street<br/>\n Beaufort, SC 29906<br/>\n\n<br/>843-228-8937<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18E',title:'Beaufort',description:'Drayton Street<br/>\n Beaufort, SC 29906<br/>\n\n<br/>843-228-8937<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18E','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amg'},geometry:{coordinates:[-80.726455,32.463426],type:'Point'},'id':'ciaq7gh1o002oiyknq4n6icv5'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Weapons Station China Lake','Street':'1 Administration Circle','City':'China Lake','State':'CA','Zip':'93555-6100','geo_accuracy':'military','Phone':'760-939-5406','Types of Aircraft':'F/A-18C/E/F',description:'1 Administration Circle<br/>\nChina Lake, CA 93555-6100<br/>\n\n<br/>760-939-5406<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/E/F',title:'China Lake',description:'1 Administration Circle<br/>\nChina Lake, CA 93555-6100<br/>\n\n<br/>760-939-5406<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/E/F','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am5'},geometry:{coordinates:[-117.633047,35.793172],type:'Point'},'id':'ciaq7gh17002diyknyjmuut79'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Fallon','Street':'4755 Pasture Rd','City':'Fallon','State':'NV','Zip':'89406','geo_accuracy':'military','Phone':'775-426-3479/2880','Types of Aircraft':'F/A-18, F-5, UH-1',description:'4755 Pasture Rd<br/>\nFallon, NV 89406<br/>\n\n<br/>775-426-3479/2880<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18, F-5, UH-1',title:'Fallon',description:'4755 Pasture Rd<br/>\nFallon, NV 89406<br/>\n\n<br/>775-426-3479/2880<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18, F-5, UH-1','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am3'},geometry:{coordinates:[-118.702048,39.391035],type:'Point'},'id':'ciaq7gh14002biykn6a6brpan'},
+						  {type:'Feature',properties:{'Base Name':'Marine Corps Air Station Beaufort','Street':'Drayton Street','City':' Beaufort','State':'SC','Zip':'29906','geo_accuracy':'residential','Phone':'843-228-8937','Types of Aircraft':'F/A-18E',description:'Drayton Street<br/>\n Beaufort, SC 29906<br/>\n\n<br/>843-228-8937<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18E',title:'Beaufort',description:'Drayton Street<br/>\n Beaufort, SC 29906<br/>\n\n<br/>843-228-8937<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18E','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amg'},geometry:{coordinates:[-80.726455,32.463426],type:'Point'},'id':'ciaq7gh1o002oiyknq4n6icv5'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Weapons Station China Lake','Street':'1 Administration Circle','City':'China Lake','State':'CA','Zip':'93555-6100','geo_accuracy':'military','Phone':'760-939-5406','Types of Aircraft':'F/A-18C/E/F',description:'1 Administration Circle<br/>\nChina Lake, CA 93555-6100<br/>\n\n<br/>760-939-5406<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/E/F',title:'China Lake',description:'1 Administration Circle<br/>\nChina Lake, CA 93555-6100<br/>\n\n<br/>760-939-5406<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/E/F','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am5'},geometry:{coordinates:[-117.633047,35.793172],type:'Point'},'id':'ciaq7gh17002diyknyjmuut79'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Fallon','Street':'4755 Pasture Rd','City':'Fallon','State':'NV','Zip':'89406','geo_accuracy':'military','Phone':'775-426-3479/2880','Types of Aircraft':'F/A-18, F-5, UH-1',description:'4755 Pasture Rd<br/>\nFallon, NV 89406<br/>\n\n<br/>775-426-3479/2880<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18, F-5, UH-1',title:'Fallon',description:'4755 Pasture Rd<br/>\nFallon, NV 89406<br/>\n\n<br/>775-426-3479/2880<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18, F-5, UH-1','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am3'},geometry:{coordinates:[-118.702048,39.391035],type:'Point'},'id':'ciaq7gh14002biykn6a6brpan'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Joint Reserve Base Fort Worth','Street':'1510 Chennault Avenue','City':'Fort Worth','State':'TX','Zip':'76127','geo_accuracy':'military','Phone':' 817-782-7531/7815 or 817-782-6363 ext. 242','Types of Aircraft':'C-12, C-9, C-40',description:'1510 Chennault Avenue<br/>\nFort Worth, TX 76127<br/>\n\n<br/> 817-782-7531/7815 or 817-782-6363 ext. 242<br/>\n\n<br/>Available Aircraft<br/>\nC-12, C-9, C-40',title:'Fort Worth',description:'1510 Chennault Avenue<br/>\nFort Worth, TX 76127<br/>\n\n<br/> 817-782-7531/7815 or 817-782-6363 ext. 242<br/>\n\n<br/>Available Aircraft<br/>\nC-12, C-9, C-40','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am9'},geometry:{coordinates:[-97.431248,32.766278],type:'Point'},'id':'ciaq7gh1d002hiyknepqy02pq'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Jacksonville','Street':'6801 Roosevelt Ave','City':'Jacksonville','State':'FL','Zip':'32212','geo_accuracy':'military','Phone':'904-542-2511/2415','Types of Aircraft':'P-3, SH-60, S-3; H-60F/H; P-3C',description:'6801 Roosevelt Ave<br/>\nJacksonville, FL 32212<br/>\n\n<br/>904-542-2511/2415<br/>\n\n<br/>Available Aircraft<br/>\nP-3, SH-60, S-3; H-60F/H; P-3C',title:'Jacksonville',description:'6801 Roosevelt Ave<br/>\nJacksonville, FL 32212<br/>\n\n<br/>904-542-2511/2415<br/>\n\n<br/>Available Aircraft<br/>\nP-3, SH-60, S-3; H-60F/H; P-3C','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am1'},geometry:{coordinates:[-81.684045,30.21788],type:'Point'},'id':'ciaq7gh1f002iiyknjnqjwqdf'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Key West','Street':'4114 Arthur Sawyer Rd','City':'Key West','State':'FL','Zip':'33040','geo_accuracy':'residential','Phone':'305-293-2771/2425','Types of Aircraft':'C-12, SH-3 ',description:'4114 Arthur Sawyer Rd<br/>\nKey West, FL 33040<br/>\n\n<br/>305-293-2771/2425<br/>\n\n<br/>Available Aircraft<br/>\nC-12, SH-3 ',title:'Key West',description:'4114 Arthur Sawyer Rd<br/>\nKey West, FL 33040<br/>\n\n<br/>305-293-2771/2425<br/>\n\n<br/>Available Aircraft<br/>\nC-12, SH-3 ','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am0'},geometry:{coordinates:[-81.777354,24.580656],type:'Point'},'id':'ciaq7gh110029iyknmt3snhqc'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Kingsville','Street':'554 McCain St','City':'Kingsville','State':'TX','Zip':'78363','geo_accuracy':'residential','Phone':'361-516-6414/6108/6146','Types of Aircraft':'T-45',description:'554 McCain St<br/>\nKingsville, TX 78363<br/>\n\n<br/>361-516-6414/6108/6146<br/>\n\n<br/>Available Aircraft<br/>\nT-45',title:'Kingsville',description:'554 McCain St<br/>\nKingsville, TX 78363<br/>\n\n<br/>361-516-6414/6108/6146<br/>\n\n<br/>Available Aircraft<br/>\nT-45','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amb'},geometry:{coordinates:[-97.817914,27.495447],type:'Point'},'id':'ciaq7gh1g002jiyknzctv5wzo'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Lemoore','Street':'700 Avenger Ave','City':'Lemoore','State':'CA','Zip':'93246','geo_accuracy':'house','Phone':'559-998-2043/1023/3394','Types of Aircraft':'F/A-18C/D Hornet; F/A-18E/F Super Hornet',description:'700 Avenger Ave<br/>\nLemoore, CA 93246<br/>\n\n<br/>559-998-2043/1023/3394<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/D Hornet; F/A-18E/F Super Hornet',title:'Lemoore',description:'700 Avenger Ave<br/>\nLemoore, CA 93246<br/>\n\n<br/>559-998-2043/1023/3394<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/D Hornet; F/A-18E/F Super Hornet','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am4'},geometry:{coordinates:[-119.871305,36.264942],type:'Point'},'id':'ciaq7gh16002ciykn8v20i52s'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Station Mayport','Street':'1980 Baltimore Street','City':'Mayport','State':'FL','Zip':'32228','geo_accuracy':'house','Phone':'904-270-6130/5226 or 904-270-6400 ext. 230','Types of Aircraft':'SH-60; H-60B',description:'1980 Baltimore Street<br/>\nMayport, FL 32228<br/>\n\n<br/>904-270-6130/5226 or 904-270-6400 ext. 230<br/>\n\n<br/>Available Aircraft<br/>\nSH-60; H-60B',title:'Mayport',description:'1980 Baltimore Street<br/>\nMayport, FL 32228<br/>\n\n<br/>904-270-6130/5226 or 904-270-6400 ext. 230<br/>\n\n<br/>Available Aircraft<br/>\nSH-60; H-60B','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amf'},geometry:{coordinates:[-81.39867,30.391865],type:'Point'},'id':'ciaq7gh1n002niyknxjm0d5kn'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Meridian','Street':'255 Rosenbaum Ave','City':'Meridian','State':'MS','Zip':'39309-5003','geo_accuracy':'military','Phone':'601-679-2751/2865','Types of Aircraft':'T-45',description:'255 Rosenbaum Ave<br/>\nMeridian, MS 39309-5003<br/>\n\n<br/>601-679-2751/2865<br/>\n\n<br/>Available Aircraft<br/>\nT-45',title:'Meridian',description:'255 Rosenbaum Ave<br/>\nMeridian, MS 39309-5003<br/>\n\n<br/>601-679-2751/2865<br/>\n\n<br/>Available Aircraft<br/>\nT-45','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amd'},geometry:{coordinates:[-88.588453,32.556654],type:'Point'},'id':'ciaq7gh1j002liyknprot8l0o'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Joint Reserve Base New Orleans','Street':'301 Russell Dr','City':'Belle Chasse','State':'LA','Zip':'70037','geo_accuracy':'residential','Phone':'504-678-3100/3260','Types of Aircraft':'C130',description:'301 Russell Dr<br/>\nBelle Chasse, LA 70037<br/>\n\n<br/>504-678-3100/3260<br/>\n\n<br/>Available Aircraft<br/>\nC130',title:'New Orleans',description:'301 Russell Dr<br/>\nBelle Chasse, LA 70037<br/>\n\n<br/>504-678-3100/3260<br/>\n\n<br/>Available Aircraft<br/>\nC130','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amc'},geometry:{coordinates:[-90.021278,29.827253],type:'Point'},'id':'ciaq7gh1i002kiyknatj7ne8t'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Station Norfolk','Street':'1530 Gilbert Street','City':'Norfolk','State':'VA','Zip':'23511','geo_accuracy':'residential','Phone':'757-444-2442/3832/7540','Types of Aircraft':'E-2, MH-60S, C-2; H-60F/H ',description:'1530 Gilbert Street<br/>\nNorfolk, VA 23511<br/>\n\n<br/>757-444-2442/3832/7540<br/>\n\n<br/>Available Aircraft<br/>\nE-2, MH-60S, C-2; H-60F/H ',title:'Norfolk',description:'1530 Gilbert Street<br/>\nNorfolk, VA 23511<br/>\n\n<br/>757-444-2442/3832/7540<br/>\n\n<br/>Available Aircraft<br/>\nE-2, MH-60S, C-2; H-60F/H ','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4ami'},geometry:{coordinates:[-76.328613,36.946708],type:'Point'},'id':'ciaq7gh1r002qiyknm258kntz'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station North Island','Street':'Naval Base Coronado','City':'San Diego','State':'CA','Zip':'92135','geo_accuracy':'naval_base','Phone':'619-545-8233/8167/1856/1830','Types of Aircraft':'SH-60, C-9, MH-60S, C-2; H-60F/H, H-60B',description:'Naval Base Coronado<br/>\nSan Diego, CA 92135<br/>\n\n<br/>619-545-8233/8167/1856/1830<br/>\n\n<br/>Available Aircraft<br/>\nSH-60, C-9, MH-60S, C-2; H-60F/H, H-60B',title:'San Diego',description:'Naval Base Coronado<br/>\nSan Diego, CA 92135<br/>\n\n<br/>619-545-8233/8167/1856/1830<br/>\n\n<br/>Available Aircraft<br/>\nSH-60, C-9, MH-60S, C-2; H-60F/H, H-60B','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am7'},geometry:{coordinates:[-117.205958,32.698237],type:'Point'},'id':'ciaq7gh1a002fiykn4oc90gx9'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Oceana','Street':'1750 Tomcat Blvd','City':'Virginia Beach','State':'VA','Zip':'23460','geo_accuracy':'military','Phone':'757-433-9141','Types of Aircraft':'F/A-18C/D/E/F Hornet ',description:'1750 Tomcat Blvd<br/>\nVirginia Beach, VA 23460<br/>\n\n<br/>757-433-9141<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/D/E/F Hornet ',title:'Oceana',description:'1750 Tomcat Blvd<br/>\nVirginia Beach, VA 23460<br/>\n\n<br/>757-433-9141<br/>\n\n<br/>Available Aircraft<br/>\nF/A-18C/D/E/F Hornet ','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amh'},geometry:{coordinates:[-76.032205,36.815824],type:'Point'},'id':'ciaq7gh1q002piyknvotfhh9s'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Patuxent River','Street':'21967 Cuddihy Rd','City':'Patuxent River','State':'MD','Zip':'20670','geo_accuracy':'military','Phone':'301-342-3340/1021','Types of Aircraft':'Various',description:'21967 Cuddihy Rd<br/>\nPatuxent River, MD 20670<br/>\n\n<br/>301-342-3340/1021<br/>\n\n<br/>Available Aircraft<br/>\nVarious',title:'Patuxent River',description:'21967 Cuddihy Rd<br/>\nPatuxent River, MD 20670<br/>\n\n<br/>301-342-3340/1021<br/>\n\n<br/>Available Aircraft<br/>\nVarious','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4amj'},geometry:{coordinates:[-76.418528,38.28374],type:'Point'},'id':'ciaq7gh1t002riykn2luvbgzc'},
+
+						  {type:'Feature',properties:{'Base Name':'Tinker Air Force Base','Street':'3001 S Douglas Blvd','City':'Oklahoma City','State':'OK','Zip':'73145','geo_accuracy':'house','Phone':'405-739-7646','Types of Aircraft':'E-6B',description:'3001 S Douglas Blvd<br/>\nOklahoma City, OK 73145<br/>\n\n<br/>405-739-7646<br/>\n\n<br/>Available Aircraft<br/>\nE-6B',title:'Tinker AFB',description:'3001 S Douglas Blvd<br/>\nOklahoma City, OK 73145<br/>\n\n<br/>405-739-7646<br/>\n\n<br/>Available Aircraft<br/>\nE-6B','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am8'},geometry:{coordinates:[-97.370885,35.435087],type:'Point'},'id':'ciaq7gh1c002giyknczspfbq1'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Base Ventura County','Street':'        311 Main Road','City':'Oxnard','State':'CA','Zip':'93042','geo_accuracy':'residential','Phone':'805-989-8521/8094/0161','Types of Aircraft':'P-3, E-2; E-2C',description:'        311 Main Road<br/>\nOxnard, CA 93042<br/>\n\n<br/>805-989-8521/8094/0161<br/>\n\n<br/>Available Aircraft<br/>\nP-3, E-2; E-2C',title:'Ventura County',description:'        311 Main Road<br/>\nOxnard, CA 93042<br/>\n\n<br/>805-989-8521/8094/0161<br/>\n\n<br/>Available Aircraft<br/>\nP-3, E-2; E-2C','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am6'},geometry:{coordinates:[-119.097136,34.117718],type:'Point'},'id':'ciaq7gh19002eiyknk8xo1o7z'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Whidbey Island','Street':'3730 N Charles Porter Ave','City':'Oak Harbor','State':'WA','Zip':'98278','geo_accuracy':'military','Phone':' 360-257-8663/3374/2120/5641','Types of Aircraft':'P-3C; EA-6B; EA-6B, P-3, C-9',description:'3730 N Charles Porter Ave<br/>\nOak Harbor, WA 98278<br/>\n\n<br/> 360-257-8663/3374/2120/5641<br/>\n\n<br/>Available Aircraft<br/>\nP-3C; EA-6B; EA-6B, P-3, C-9',title:'Whidbey Island',description:'3730 N Charles Porter Ave<br/>\nOak Harbor, WA 98278<br/>\n\n<br/> 360-257-8663/3374/2120/5641<br/>\n\n<br/>Available Aircraft<br/>\nP-3C; EA-6B; EA-6B, P-3, C-9','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4am2'},geometry:{coordinates:[-122.669405,48.346408],type:'Point'},'id':'ciaq7gh12002aiykn8acxr2cm'},
+
+						  {type:'Feature',properties:{'Base Name':'Naval Air Station Whiting Field','Street':'7550 USS Essex St','City':'Milton','State':'FL','Zip':'32570','geo_accuracy':'military','Phone':'850-623-7147/7475/7651','Types of Aircraft':'T-34, TH-57',description:'7550 USS Essex St<br/>\nMilton, FL 32570<br/>\n\n<br/>850-623-7147/7475/7651<br/>\n\n<br/>Available Aircraft<br/>\nT-34, TH-57',title:'Whiting Field',description:'7550 USS Essex St<br/>\nMilton, FL 32570<br/>\n\n<br/>850-623-7147/7475/7651<br/>\n\n<br/>Available Aircraft<br/>\nT-34, TH-57','marker-color':'#b0343f','marker-size':'','marker-symbol':'','id':'marker-iaq7d4ame'},geometry:{coordinates:[-87.018384,30.712343],type:'Point'},'id':'ciaq7gh1l002miyknc1ap20w1'},
+
+						  ]);
+
+
+
+						var locMenu = document.getElementById('map-locations1');
+
+						  // Iterate through each feature layer item, build a
+						  // marker menu item and enable a click event that pans to + opens
+						  // a marker that's associated to the marker item.
+						  myLayer.eachLayer(function(marker) {
+							var bullet = locMenu.appendChild(document.createElement('li'));
+							var link = locMenu.appendChild(document.createElement('a'));
+							link.className = 'item';
+							link.href = '#';
+
+							// Populate content from each markers object.
+							link.innerHTML = marker.feature.properties.title + ', ' + marker.feature.properties.State
+							  '<br /><small></small>';
+							link.onclick = function() {
+							  if (/active/.test(this.className)) {
+								this.className = this.className.replace(/active/, '').replace(/\s\s*$/, '');
+							  } else {
+								var siblings = locMenu.getElementsByTagName('a');
+								for (var i = 0; i < siblings.length; i++) {
+								  siblings[i].className = siblings[i].className
+									.replace(/active/, '').replace(/\s\s*$/, '');
+								};
+								this.className += ' active';
+
+								// When a menu item is clicked, animate the map to center
+								// its associated marker and open its popup.
+								map.panTo(marker.getLatLng());
+								marker.openPopup();
+							  }
+							  return false;
+							};
+							  bullet.appendChild(link);
+
+
+						  });
+					</script>
+
+	<script>
+
+					 $(document).ready(function () {
+	  var size = $("#data > ul > li").size();
+	  $(".Column1 > ul > li").each(function (index) {
+		  if (index >= size / 2) {
+			  $(this).appendTo("#map-locations2");
+		  }
+	  });
+  });
+					</script>
+</body>
+
+</html>

@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="Find information about the U.S. Navy's premier outreach
+programs including Navy Weeks, fly-overs, color-guards, hometown news, speakers, bands." />
+<link rel="icon" href="assets/img/favicon.png" />
+<title>U.S. Navy | Navy Weeks</title>
+<link href="assets/css/bootstrap.css" rel="stylesheet" />
+<link href="assets/css/style.css" rel="stylesheet" />
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/stickyMojo.js"></script>
+
+
+
+
+
+<style>
+
+
+a.ic-twitter-badge {
+	display: none !important;
+}
+
+
+.container.mtb {
+	margin-bottom: 0px;
+	margin-left: 30%;
+}
+.jumbotron {
+background: transparent;
+padding-bottom: 48px;
+	margin-top: 0px;
+	padding-top: 150px;
+}
+
+
+
+/* core body */
+.nw {
+  display: block;
+  width: 975px;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+#nw header {
+  margin-bottom: 35px;
+}
+
+#nw-content {
+  width: 650px;
+  float: left;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.59) none repeat scroll 0% 0%;
+	margin-top: 75px;
+border: 0px solid rgb(153, 153, 153);
+
+  box-shadow: 4px 5px 10px rgba(30, 30, 30, 0.35);
+
+}
+
+
+
+#sidebar {
+  width: 300px;
+
+  margin: 50px 0 30px 0;
+  padding: 5px 10px;
+  float: right;
+background-color: white;
+opacity:0.8;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+#sidebar:hover {
+  opacity: 1.0;
+}
+#sidebar p { margin-bottom: 6px; }
+
+#foot {
+	display: block;
+	width: 100%;
+	clear: both;
+	padding: 20px 0px 75px;
+	background: transparent none repeat scroll 0% 0%;
+	position: relative;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+}
+
+h1 {
+
+		background-color: #353f49;
+	opacity: .9;
+	padding: 10px;
+}
+
+	h2 {
+
+		background-color: #353f49;
+	opacity: .9;
+	padding: 10px;
+		color: white;
+
+}
+
+#background {
+   position: relative;
+}
+
+
+	.btn-clear {
+	background-color: #393f49;
+	border: 1px solid white;
+	border-radius: 1px;
+	margin-top: 10px;
+	color: white;
+	opacity: .9;
+		font-weight:bold;
+}
+
+
+#background:after {
+	content : "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	opacity : 0.5;
+	z-index: -2;
+
+  background: #F4EAD4;
+  background-size: 120%;
+  background-image: url(assets/img/cheyenne-full-map.gif); /* fallback */
+  background-image: url(assets/img/cheyenne-full-map.gif), -webkit-gradient(linear, left top, left bottom, from(#F4EAD4), to(#DFC387)); /* Saf4+, Chrome */
+  background-image: url(assets/img/cheyenne-full-map.gif), -webkit-linear-gradient(top, #F4EAD4, #DFC387); /* Chrome 10+, Saf5.1+ */
+  background-image: url(assets/img/cheyenne-full-map.gif),    -moz-linear-gradient(top, #F4EAD4, #DFC387); /* FF3.6+ */
+  background-image: url(assets/img/cheyenne-full-map.gif),      -o-linear-gradient(top, #F4EAD4, #DFC387); /* Opera 11.10+ */
+  background-image: url(assets/img/cheyenne-map-big.gif),         linear-gradient(to bottom, #fff, #fff); /* W3C */-->
+}
+
+#background {
+   position: relative;
+}
+#content-background:after {
+	content : "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	opacity : 0.7;
+	z-index: -1;
+
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(221,198,150,0.2) 2%, rgba(221,197,149,1) 5%, rgba(219,193,146,1) 64%, rgba(223,195,135,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(2%,rgba(221,198,150,0.2)), color-stop(5%,rgba(221,197,149,1)), color-stop(64%,rgba(219,193,146,1)), color-stop(100%,rgba(223,195,135,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(221,198,150,0.2) 2%,rgba(221,197,149,1) 5%,rgba(219,193,146,1) 64%,rgba(223,195,135,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(221,198,150,0.2) 2%,rgba(221,197,149,1) 5%,rgba(219,193,146,1) 64%,rgba(223,195,135,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(221,198,150,0.2) 2%,rgba(221,197,149,1) 5%,rgba(219,193,146,1) 64%,rgba(223,195,135,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(221,198,150,0.2) 2%,rgba(221,197,149,1) 5%,rgba(219,193,146,1) 64%,rgba(223,195,135,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#dfc387',GradientType=0 ); /* IE6-9 */
+
+}
+
+#nw-common {
+margin-left: -33%;
+
+	width: 300px;
+	float: left;
+	padding: 15px 20px;
+	background: rgba(255, 255, 255, 0.59) none repeat scroll 0% 0%;
+	margin-top: 75px;
+	border: 0px solid #999;
+	box-shadow: 4px 5px 10px rgba(30, 30, 30, 0.35);
+
+}
+
+.container.mtb.nw {
+margin-left: 33%;
+margin-right: 33%;
+
+}
+
+	.navbar-header .navbar-brand {
+	color: #102244;
+}
+.navbar-default .navbar-nav > li > a {
+
+  color: #102244;
+}
+
+#pointer {
+
+}
+
+h4 {
+	color: rgb(41, 47, 51);
+cursor: auto;
+display: inline;
+font-family: 'Helvetica Neue', Roboto, 'Segoe UI', Calibri, sans-serif;
+font-size: 14px;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+height: auto;
+line-height: 18px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+outline-color: rgb(41, 47, 51);
+outline-style: none;
+outline-width: 0px;
+text-decoration: none;
+text-transform: none;
+width: auto;
+}
+
+	.nw-nav-bar {
+	background-color: white;
+}
+</style>
+</head>
+<body id="background">
+
+<header>
+
+	<div class="niceGallery" id="gallery">
+		<!-- HERE IS PLACE FOR PHOTOS -->
+	</div>
+		<div id="" class="big-head-img-size" title="Navy admiral speaking."></div>
+
+		<nav id="site-nav" class="navbar navbar-default navbar-static-top">
+
+			<!--Big Head - Image text overlay, logo, title and site navigation-->
+
+
+
+
+			<script>
+				$("#site-nav").load("navigation.html");
+			</script>
+		</nav>
+		<div class="jumbotron" style="
+	height: 498px;">
+	<div class="container hidden-xxs">
+
+					<h1><strong>Navy Week Cheyenne</strong></h1>
+<h2 style="
+	width: 420px;"><strong>July 15 - 20</strong></h2>
+
+					<a class="btn btn-clear" href="#top" role="button">Events</a>
+		<a class="btn btn-clear" href="#top" role="button">Media</a>
+
+
+					<a class="btn btn-clear" href="mailto:timothy.c.page@navy.mil" role="button">timothy.c.page@navy.mil</a>
+
+
+
+			</div>
+
+		</div>
+		<div id="sm-screen-title" class="container visible-xxs">
+
+					<h1><strong>Navy Week Cheyenne</strong></h1>
+<h3><strong>July 15 - 20</strong></h3>
+
+
+					<a class="btn btn-clear" href="#top" role="button">Events</a>
+
+
+	<a class="btn btn-clear" href="mailto:timothy.c.page@navy.mil" role="button">timothy.c.page@navy.mil</a>
+			</div>
+
+	</header>
+
+
+<div class="container mtb nw">
+		 <div class="row">
+	<header id="nw-heading"></header>
+			 <div id="nw-common"><h4>Photos</h4><p><a data-flickr-embed="true" href="https://www.flickr.com/photos/navyoutreach/sets/72157655853737956" title="Cheyenne Navy Week"><img src="https://farm1.staticflickr.com/488/19535929630_ca45da9aaa_z.jpg" width="640" height="426" alt="Cheyenne Navy Week"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+<p>
+
+	<!--<a href="https://www.flickr.com/photos/navyoutreach/sets/72157655853737956">See more photos</a>--></p> <a class="twitter-timeline" href="https://twitter.com/NavyOutreach/favorites" data-widget-id="629664482495696896" data-chrome="nofooter noborders transparent">Favorite Tweets by @NavyOutreach</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+
+
+			 </div>
+	<div id="nw-content">
+
+
+
+<script>
+
+  $.ajax({
+  url:"https://www.kimonolabs.com/api/2v0owv96?apikey=wWVsu62WsDkqQSr48UQMdJc0wbOFZzFb",
+  crossDomain: true,
+  dataType: "jsonp",
+  success: function (response) {
+
+var collection = response.results.nwCheyenne;
+	 for (var i = 1; i < collection.length; i++){
+	  // Traverses through every element in the entire collection
+
+		   $(".panel-group").append('<div class="panel panel-default"><div style="padding: 8px 15px;" class="panel-heading" role="tab" id="heading'
+		   + collection[i].index
+		   + '"><h4 class="panel-title"><div class="date-color"><ul style="list-style-type: none;"><li class="list-day">'
+		   + collection[i].day + '</li><li class="list-date">'
+		   + collection[i].numdate + '</li><li class="list-month">'
+		   + collection[i].month + '</li></ul></div><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'
+		   + collection[i].index + '" aria-expanded="false" aria-controls="collapse'
+		   + collection[i].index + '">'
+		   + collection[i].title + '<br><h6>'
+		   + collection[i].sub + '</a></h6></h4></div><div style="height: 0px;" id="collapse'
+		   + collection[i].index + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'
+		   + collection[i].index + '"><div class="panel-body"><div class="row"><div class="col-sm-4"><p><em>'
+		   + collection[i].start + ' - '
+		   + collection[i].end + '</em></p><p><b>'
+		   + collection[i].place + '</b><br>'
+		   + collection[i].street + '<br>'
+		   + collection[i].city + ', '
+		   + collection[i].state + '</p></div><div class="col-sm-8"><p>'
+		   + collection[i].description + '</p><img src="assets/img/' + collection[i].img + '"></div></div></div></div></div>');
+		 // adds the text and the links from the first property into the list
+	  }
+
+
+   }
+});
+
+
+</script>
+<!--
+<h4>Events</h4>
+				 <p><div class="hline"></div></p>-->
+			 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+</div>
+
+	  <div id="articlefoot">
+		<hr>
+
+
+	  </div>
+	</div>
+
+	<div id="sidebar">
+
+
+
+<h3>Navy Week Cheyenne</h3>
+	<p>
+						 <em>July 15 - 20</em><br/>
+
+					 </p>
+	<p>Cheyenne Navy Week is scheduled for July 14-20, 2015, coincident with the city’s Frontier Days, and is designed to provide area residents an opportunity to learn about the Navy, its people, and its importance to national security and prosperity.</p>
+<div class="spacing"></div>
+<h4>Contact</h4>
+<div class="hline"></div>
+
+<p>
+<b>Navy Coordinator:</b> Lt. Cmdr. Tim Page<br />
+						 <b>Email:</b> timothy.c.page@navy.mil<br />
+						 <b>Phone:</b> 901.874.7048<br />
+					 </p>
+				<div class="span16">
+		<ul class="thumbnails" id="my-photos">
+		</ul>
+	</div>
+
+
+		</div >
+
+
+
+
+
+<footer id="foot"> <!-- no content --> </footer>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#sidebar').stickyMojo({footerID: '#articlefoot', contentID: '#nw-content'});
+});
+</script>
+</div>
+</div >
+
+<!--********************************************************************************
+  FOOTER
+******************************************************************************** -->
+<footer id="real-footer">
+<script>
+$("#real-footer").load("footer.html");
+</script>
+
+</body>
+
+<!--********************************************************************************
+  FOOTER
+******************************************************************************** -->
+<footer id="real-footer">
+<script>
+$("#real-footer").load("footer.html");
+</script>
+<!-- JavaScript
+================================================== -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/retina-1.1.0.js"></script>
+<script src="assets/js/jquery.hoverdir.js"></script>
+<script src="assets/js/jquery.hoverex.min.js"></script>
+<script src="assets/js/jquery.prettyPhoto.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.csv-0.71.js"></script>
+<script src="assets/js/custom.js"></script>
+
+	<style>.customisable-border {
+	border: 0px;
+}</style>
+</footer>
+
+</div >
+</body>
+</html>
